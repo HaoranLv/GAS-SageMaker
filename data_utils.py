@@ -244,7 +244,7 @@ class ABSADataset(Dataset):
         # 'data/aste/rest16/train.py.txt'
         #self.data_path = f'data/{task}/{data_dir}/{data_type}.txt'
         #change for s3 path
-        self.data_path = f'/opt/ml/input/data/{data_dir}/{data_type}.txt'
+        self.data_path = f'/opt/ml/input/data/{task}/{data_dir}/{data_type}.txt'
         self.paradigm = paradigm
         self.task = task
         self.max_len = max_len

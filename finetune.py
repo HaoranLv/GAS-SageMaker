@@ -345,8 +345,9 @@ if __name__ == '__main__':
         all_checkpoints = []
         for f in os.listdir(saved_model_dir):
             file_name = os.path.join(saved_model_dir, f)
+            print(file_name)
             if 'cktepoch' in file_name:
-                if(file_name == 'cktepoch={0}.ckpt'):
+                if(file_name == os.path.join(saved_model_dir,'cktepoch={}.ckpt'.format(args.num_train_epochs))):
                     all_checkpoints.append(file_name)
                 else:
                     os.remove(file_name)
